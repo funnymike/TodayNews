@@ -18,7 +18,22 @@ let BASE_URL = "https://is.snssdk.com"
 let device_id: Int = 6096495334
 let iid: Int = 5034850950
 
+let isIPhoneX: Bool = kScreenWidth == 812 ? true : false
+
+let newsTitleHeight: CGFloat = 40
+let kMyHeaderViewHeight: CGFloat = 280
+let kUserDetailHeaderBGImageViewHeight: CGFloat = 146
+
 let isNight = "isNight"
+/// 关注的用户详情界面 topTab 的按钮的宽度
+let topTabButtonWidth: CGFloat = kScreenWidth * 0.2
+/// 关注的用户详情界面 topTab 的指示条的宽度 和 高度
+let topTabindicatorWidth: CGFloat = 40
+let topTabindicatorHeight: CGFloat = 2
+
+let MyPresentationControllerDismiss = "MyPresentationControllerDismiss"
+let NavigationBarConcernButtonClicked = "NavigationBarConcernButtonClicked"
+let UserDetailHeaderViewButtonClicked = "UserDetailHeaderViewButtonClicked"
 
 /// 动态图片的宽高
 // 图片的宽高

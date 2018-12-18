@@ -22,6 +22,23 @@
 		E905EA6021C8A7FE0064D6CA /* default_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = E905EA5E21C8A7FE0064D6CA /* default_theme.plist */; };
 		E905EA6121C8A7FE0064D6CA /* night_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = E905EA5F21C8A7FE0064D6CA /* night_theme.plist */; };
 		E905EA6321C8A85B0064D6CA /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905EA6221C8A85B0064D6CA /* Const.swift */; };
+		E905EA6521C8CC850064D6CA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905EA6421C8CC850064D6CA /* HomeViewController.swift */; };
+		E905EA6721C8CC9C0064D6CA /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905EA6621C8CC9C0064D6CA /* VideoViewController.swift */; };
+		E905EA6921C8CCE50064D6CA /* RedPackageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905EA6821C8CCE50064D6CA /* RedPackageViewController.swift */; };
+		E905EA6B21C8CD0E0064D6CA /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905EA6A21C8CD0E0064D6CA /* HomeTableViewController.swift */; };
+		E905EA6D21C8CD400064D6CA /* WeitoutiaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905EA6C21C8CD400064D6CA /* WeitoutiaoViewController.swift */; };
+		E905EA6F21C8CD6D0064D6CA /* HuoshanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905EA6E21C8CD6D0064D6CA /* HuoshanViewController.swift */; };
+		E905EA7121C8D3D30064D6CA /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905EA7021C8D3D30064D6CA /* MyNavigationController.swift */; };
+		E905EA7321C8E41A0064D6CA /* HomeNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905EA7221C8E41A0064D6CA /* HomeNavigationView.swift */; };
+		E905EA7521C8E4230064D6CA /* HomeNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E905EA7421C8E4230064D6CA /* HomeNavigationView.xib */; };
+		E905EA7F21C8E9970064D6CA /* NSData+CRC32.m in Sources */ = {isa = PBXBuildFile; fileRef = E905EA7E21C8E9970064D6CA /* NSData+CRC32.m */; };
+		E905EA8121C8EA9E0064D6CA /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905EA8021C8EA9E0064D6CA /* UIKit+Extension.swift */; };
+		E905EA8321C8EC680064D6CA /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905EA8221C8EC680064D6CA /* Foundation+Extension.swift */; };
+		E905EA8521C8ED560064D6CA /* SVProgressHUD+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905EA8421C8ED560064D6CA /* SVProgressHUD+Extension.swift */; };
+		E905EA8721C8F0380064D6CA /* NetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905EA8621C8F0380064D6CA /* NetworkTool.swift */; };
+		E905EA8921C8F12B0064D6CA /* HomeNewsTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905EA8821C8F12B0064D6CA /* HomeNewsTitle.swift */; };
+		E905EA8B21C8F1390064D6CA /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905EA8A21C8F1390064D6CA /* NewsModel.swift */; };
+		E905EA8D21C8F1480064D6CA /* Wenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905EA8C21C8F1480064D6CA /* Wenda.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +86,25 @@
 		E905EA5E21C8A7FE0064D6CA /* default_theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = default_theme.plist; sourceTree = "<group>"; };
 		E905EA5F21C8A7FE0064D6CA /* night_theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = night_theme.plist; sourceTree = "<group>"; };
 		E905EA6221C8A85B0064D6CA /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		E905EA6421C8CC850064D6CA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E905EA6621C8CC9C0064D6CA /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		E905EA6821C8CCE50064D6CA /* RedPackageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedPackageViewController.swift; sourceTree = "<group>"; };
+		E905EA6A21C8CD0E0064D6CA /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		E905EA6C21C8CD400064D6CA /* WeitoutiaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeitoutiaoViewController.swift; sourceTree = "<group>"; };
+		E905EA6E21C8CD6D0064D6CA /* HuoshanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HuoshanViewController.swift; sourceTree = "<group>"; };
+		E905EA7021C8D3D30064D6CA /* MyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
+		E905EA7221C8E41A0064D6CA /* HomeNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigationView.swift; sourceTree = "<group>"; };
+		E905EA7421C8E4230064D6CA /* HomeNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeNavigationView.xib; sourceTree = "<group>"; };
+		E905EA7821C8E9030064D6CA /* TodayNews-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TodayNews-Bridging-Header.h"; sourceTree = "<group>"; };
+		E905EA7D21C8E9970064D6CA /* NSData+CRC32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+CRC32.h"; sourceTree = "<group>"; };
+		E905EA7E21C8E9970064D6CA /* NSData+CRC32.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+CRC32.m"; sourceTree = "<group>"; };
+		E905EA8021C8EA9E0064D6CA /* UIKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension.swift"; sourceTree = "<group>"; };
+		E905EA8221C8EC680064D6CA /* Foundation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
+		E905EA8421C8ED560064D6CA /* SVProgressHUD+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SVProgressHUD+Extension.swift"; sourceTree = "<group>"; };
+		E905EA8621C8F0380064D6CA /* NetworkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTool.swift; sourceTree = "<group>"; };
+		E905EA8821C8F12B0064D6CA /* HomeNewsTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNewsTitle.swift; sourceTree = "<group>"; };
+		E905EA8A21C8F1390064D6CA /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		E905EA8C21C8F1480064D6CA /* Wenda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wenda.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +241,8 @@
 		E905EA3C21C8A68A0064D6CA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E905EA6421C8CC850064D6CA /* HomeViewController.swift */,
+				E905EA6A21C8CD0E0064D6CA /* HomeTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -212,6 +250,9 @@
 		E905EA3D21C8A68A0064D6CA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E905EA8821C8F12B0064D6CA /* HomeNewsTitle.swift */,
+				E905EA8A21C8F1390064D6CA /* NewsModel.swift */,
+				E905EA8C21C8F1480064D6CA /* Wenda.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,6 +260,8 @@
 		E905EA3E21C8A68A0064D6CA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E905EA7221C8E41A0064D6CA /* HomeNavigationView.swift */,
+				E905EA7421C8E4230064D6CA /* HomeNavigationView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,6 +279,7 @@
 		E905EA4021C8A68A0064D6CA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E905EA6621C8CC9C0064D6CA /* VideoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,6 +311,7 @@
 		E905EA4421C8A68A0064D6CA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E905EA6821C8CCE50064D6CA /* RedPackageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -298,6 +343,7 @@
 		E905EA4821C8A68A0064D6CA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E905EA6E21C8CD6D0064D6CA /* HuoshanViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -359,9 +405,11 @@
 		E905EA5321C8A68B0064D6CA /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E905EA7621C8E8B90064D6CA /* Extension */,
+				E905EA7721C8E8B90064D6CA /* Tools */,
 				E905EA5421C8A68B0064D6CA /* Controller */,
-				E905EA5521C8A68B0064D6CA /* Model */,
 				E905EA5621C8A68B0064D6CA /* View */,
+				E905EA5521C8A68B0064D6CA /* Model */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -370,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				E905EA5B21C8A7B60064D6CA /* MyTabBarController.swift */,
+				E905EA7021C8D3D30064D6CA /* MyNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -401,6 +450,7 @@
 		E905EA5821C8A68B0064D6CA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E905EA6C21C8CD400064D6CA /* WeitoutiaoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -426,6 +476,27 @@
 				E905EA5F21C8A7FE0064D6CA /* night_theme.plist */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		E905EA7621C8E8B90064D6CA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E905EA7821C8E9030064D6CA /* TodayNews-Bridging-Header.h */,
+				E905EA7D21C8E9970064D6CA /* NSData+CRC32.h */,
+				E905EA7E21C8E9970064D6CA /* NSData+CRC32.m */,
+				E905EA8021C8EA9E0064D6CA /* UIKit+Extension.swift */,
+				E905EA8221C8EC680064D6CA /* Foundation+Extension.swift */,
+				E905EA8421C8ED560064D6CA /* SVProgressHUD+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E905EA7721C8E8B90064D6CA /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				E905EA8621C8F0380064D6CA /* NetworkTool.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,6 +571,7 @@
 				TargetAttributes = {
 					E905EA0521C8A15D0064D6CA = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					E905EA1C21C8A1660064D6CA = {
 						CreatedOnToolsVersion = 10.1;
@@ -537,6 +609,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E905EA6021C8A7FE0064D6CA /* default_theme.plist in Resources */,
+				E905EA7521C8E4230064D6CA /* HomeNavigationView.xib in Resources */,
 				E905EA6121C8A7FE0064D6CA /* night_theme.plist in Resources */,
 				E905EA1721C8A1660064D6CA /* LaunchScreen.storyboard in Resources */,
 				E905EA1421C8A1660064D6CA /* Assets.xcassets in Resources */,
@@ -673,10 +746,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				E905EA0C21C8A15D0064D6CA /* ViewController.swift in Sources */,
+				E905EA8521C8ED560064D6CA /* SVProgressHUD+Extension.swift in Sources */,
+				E905EA6721C8CC9C0064D6CA /* VideoViewController.swift in Sources */,
 				E905EA5C21C8A7B60064D6CA /* MyTabBarController.swift in Sources */,
+				E905EA8B21C8F1390064D6CA /* NewsModel.swift in Sources */,
+				E905EA6F21C8CD6D0064D6CA /* HuoshanViewController.swift in Sources */,
+				E905EA8321C8EC680064D6CA /* Foundation+Extension.swift in Sources */,
+				E905EA8121C8EA9E0064D6CA /* UIKit+Extension.swift in Sources */,
 				E905EA0A21C8A15D0064D6CA /* AppDelegate.swift in Sources */,
+				E905EA7321C8E41A0064D6CA /* HomeNavigationView.swift in Sources */,
+				E905EA8D21C8F1480064D6CA /* Wenda.swift in Sources */,
+				E905EA6D21C8CD400064D6CA /* WeitoutiaoViewController.swift in Sources */,
+				E905EA8721C8F0380064D6CA /* NetworkTool.swift in Sources */,
 				E905EA1221C8A15D0064D6CA /* TodayNews.xcdatamodeld in Sources */,
+				E905EA7F21C8E9970064D6CA /* NSData+CRC32.m in Sources */,
 				E905EA6321C8A85B0064D6CA /* Const.swift in Sources */,
+				E905EA6B21C8CD0E0064D6CA /* HomeTableViewController.swift in Sources */,
+				E905EA7121C8D3D30064D6CA /* MyNavigationController.swift in Sources */,
+				E905EA6521C8CC850064D6CA /* HomeViewController.swift in Sources */,
+				E905EA8921C8F12B0064D6CA /* HomeNewsTitle.swift in Sources */,
+				E905EA6921C8CCE50064D6CA /* RedPackageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -852,12 +941,20 @@
 			baseConfigurationReference = 967A4D108F90D017CCC6242B /* Pods-TodayNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJS8A275X7;
 				INFOPLIST_FILE = TodayNews/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gdktxtech.www.TodayNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TodayNews/Classes/Main/Extension/TodayNews-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -868,12 +965,19 @@
 			baseConfigurationReference = 7A516E6093DA5A8C37030C23 /* Pods-TodayNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJS8A275X7;
 				INFOPLIST_FILE = TodayNews/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gdktxtech.www.TodayNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TodayNews/Classes/Main/Extension/TodayNews-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -888,7 +992,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJS8A275X7;
 				INFOPLIST_FILE = TodayNewsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gdktxtech.www.TodayNewsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -906,7 +1014,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJS8A275X7;
 				INFOPLIST_FILE = TodayNewsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gdktxtech.www.TodayNewsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -923,7 +1035,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJS8A275X7;
 				INFOPLIST_FILE = TodayNewsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gdktxtech.www.TodayNewsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -940,7 +1056,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MJS8A275X7;
 				INFOPLIST_FILE = TodayNewsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gdktxtech.www.TodayNewsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
