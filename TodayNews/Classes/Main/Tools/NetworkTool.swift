@@ -18,10 +18,10 @@ protocol NetworkToolProtocol {
     static func loadHomeCategoryRecommend(completionHandler:@escaping (_ titles: [HomeNewsTitle]) -> ())
     // MARK: 首页顶部导航栏搜索推荐标题内容
     static func loadHomeSearchSuggestInfo(_ completionHandler: @escaping (_ searchSuggest: String) -> ())
-//    // MARK: 获取首页、视频、小视频的新闻列表数据
-//    static func loadApiNewsFeeds(category: NewsTitleCategory, ttFrom: TTFrom, _ completionHandler: @escaping (_ maxBehotTime: TimeInterval, _ news: [NewsModel]) -> ())
-//    // MARK: 获取首页、视频、小视频的新闻列表数据,加载更多
-//    static func loadMoreApiNewsFeeds(category: NewsTitleCategory, ttFrom: TTFrom, maxBehotTime: TimeInterval, listCount: Int, _ completionHandler: @escaping (_ news: [NewsModel]) -> ())
+    // MARK: 获取首页、视频、小视频的新闻列表数据
+    static func loadApiNewsFeeds(category: NewsTitleCategory, ttFrom: TTFrom, _ completionHandler: @escaping (_ maxBehotTime: TimeInterval, _ news: [NewsModel]) -> ())
+    // MARK: 获取首页、视频、小视频的新闻列表数据,加载更多
+    static func loadMoreApiNewsFeeds(category: NewsTitleCategory, ttFrom: TTFrom, maxBehotTime: TimeInterval, listCount: Int, _ completionHandler: @escaping (_ news: [NewsModel]) -> ())
 //    // MARK: 获取一般新闻详情数据
 //    static func loadCommenNewsDetail(articleURL: String, completionHandler:@escaping (_ htmlString: String, _ images: [NewsDetailImage], _ abstracts: [String])->())
 //    // MARK: 获取图片新闻详情数据
@@ -147,6 +147,72 @@ extension NetworkToolProtocol {
             }
         }
     }
+    
+    /// 获取首页、视频、小视频的新闻列表数据
+    ///
+    /// - Parameters:
+    ///   - category: 新闻类别
+    ///   - ttFrom: 从哪一个界面
+    ///   - completionHandler: 返回新闻列表数据
+    static func loadApiNewsFeeds(category: NewsTitleCategory, ttFrom: TTFrom, _ completionHandler: @escaping (_ maxBehotTime: TimeInterval, _ news: [NewsModel]) -> ()) {
+        let pullTime = Date().timeIntervalSince1970
+        let url = BASE_URL + "/api/news/feed/v75/?"
+        let params = ["device_id": device_id,
+                      "count": 20,
+                      "list_count": 15,
+                      "category": category.rawValue,
+                      "min_behot_time": pullTime,
+                      "strict": 0,
+                      "detail": 1,
+                      "refresh_reason": 1,
+                      "tt_from": ttFrom,
+                      "iid": iid] as [String: Any]
+        Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
+            // 网络错误的提示信息
+            guard response.result.isSuccess else { return }
+            if let value = response.result.value {
+                let json = JSON(value)
+                //print("收到报文：\(json.rawValue)")
+                guard json["message"] == "success" else { return }
+                guard let datas = json["data"].array else { return }
+                completionHandler(pullTime, datas.compactMap({ NewsModel.deserialize(from: $0["content"].string) }))
+            }
+        }
+    }
+    
+    /// 获取首页、视频、小视频的新闻列表数据,加载更多
+    ///
+    /// - Parameters:
+    ///   - category: 新闻类别
+    ///   - ttFrom: 从哪一个界面
+    ///   - maxBehotTime: <#maxBehotTime description#>
+    ///   - listCount: 数据数量
+    ///   - completionHandler: 返回新闻列表数据
+    static func loadMoreApiNewsFeeds(category: NewsTitleCategory, ttFrom: TTFrom, maxBehotTime: TimeInterval, listCount: Int, _ completionHandler: @escaping (_ news: [NewsModel]) -> ()) {
+        let url = BASE_URL + "/api/news/feed/v75/?"
+        let params = ["device_id": device_id,
+                      "count": 20,
+                      "list_count": listCount,
+                      "category": category.rawValue,
+                      "max_behot_time": maxBehotTime,
+                      "strict": 0,
+                      "detail": 1,
+                      "refresh_reason": 1,
+                      "tt_from": ttFrom,
+                      "iid": iid] as [String: Any]
+        Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
+            // 网络错误的提示信息
+            guard response.result.isSuccess else { return }
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"] == "success" else { return }
+                guard let datas = json["data"].array else { return }
+                completionHandler(datas.compactMap({ NewsModel.deserialize(from: $0["content"].string) }))
+            }
+        }
+    }
+    
+    
 }
 
 struct NetworkTool: NetworkToolProtocol {}

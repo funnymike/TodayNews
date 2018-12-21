@@ -7,84 +7,60 @@
 //
 
 import UIKit
+import SVProgressHUD
+import BMPlayer
 
 class HomeTableViewController: UITableViewController {
+    
+    /// 播放器
+    lazy var player: BMPlayer = BMPlayer(customControlView: VideoPlayerCustomView())
+    /// 标题
+    var newsTitle = HomeNewsTitle()
+    /// 新闻数据
+    var news = [NewsModel]()
+    /// 刷新时间
+    var maxBehotTime: TimeInterval = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        SVProgressHUD.configuration()
+        tableView.tableFooterView = UIView()
+        tableView.theme_backgroundColor = "colors.tableViewBackgroundColor"
+        tableView.theme_separatorColor = "colors.separatorViewColor"
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    /// 设置刷新控件
+    func setupRefresh(with category: NewsTitleCategory = .recommend) {
+        let header = RefreshHeader { [weak self] in
+            // 获取视频的新闻列表数据
+            NetworkTool.loadApiNewsFeeds(category: category, ttFrom: .pull, { (timeInterval, news) in
+                if self!.tableView.mj_header.isRefreshing { self!.tableView.mj_header.endRefreshing() }
+                self!.player.removeFromSuperview()
+                self!.maxBehotTime = timeInterval
+                self!.news = news
+                self!.tableView.reloadData()
+            })
+        }
+        header?.isAutomaticallyChangeAlpha = true
+        header?.lastUpdatedTimeLabel.isHidden = true
+        tableView.mj_header = header
+        // 底部刷新控件
+        tableView.mj_footer = RefreshAutoGifFooter(refreshingBlock: { [weak self] in
+            // 获取视频的新闻列表数据，加载更多
+            NetworkTool.loadMoreApiNewsFeeds(category: category, ttFrom: .loadMore, maxBehotTime: self!.maxBehotTime, listCount: self!.news.count, {
+                if self!.tableView.mj_footer.isRefreshing { self!.tableView.mj_footer.endRefreshing() }
+                self!.tableView.mj_footer.pullingPercent = 0.0
+                self!.player.removeFromSuperview()
+                if $0.count == 0 {
+                    SVProgressHUD.showInfo(withStatus: "没有更多数据啦！")
+                    return
+                }
+                self!.news += $0
+                self!.tableView.reloadData()
+            })
+        })
+        tableView.mj_footer.isAutomaticallyChangeAlpha = true
+        tableView.mj_header.beginRefreshing()
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

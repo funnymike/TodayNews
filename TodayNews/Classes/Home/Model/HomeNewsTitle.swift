@@ -37,7 +37,7 @@ struct HomeNewsTitle: HandyJSON {
 /// 新闻标题的分类
 enum NewsTitleCategory: String, HandyJSONEnum {
     /// 推荐
-    case recommend = ""
+    case recommend = "recommend"
     /// 热点
     case hot = "news_hot"
     /// 地区
