@@ -12,7 +12,7 @@ class VideoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        kScreenWidth
         // Do any additional setup after loading the view.
     }
     
